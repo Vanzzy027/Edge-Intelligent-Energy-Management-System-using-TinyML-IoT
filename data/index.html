@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TinyML Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login">
+  <!-- Login Screen -->
+  <div id="login-screen" class="login-container active">
+    <div class="login-box">
+      <h2>TinyML Control Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="login-btn">Login</button>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Dashboard Screen -->
+  <div id="dashboard-screen" class="dashboard" style="display: none;">
+    <nav class="navbar">
+      <div id="user-profile">
+        <img id="user-photo" src="" alt="User Photo">
+        <span id="user-name"></span>
+      </div>
+      <div class="nav-controls">
+        <button id="toggle-dark-mode" class="nav-button">Dark Theme</button>
+        <button id="logout-btn" class="nav-button">Logout</button>
+      </div>
+    </nav>
+    <div class="dashboard-container">
+      <h2>TinyML Control</h2>
+      <div class="device-controls">
+        <!-- House Light Card -->
+        <div class="card">
+          <h3>House Lights</h3>
+          <button id="house-light-toggle" class="glowing-button">Toggle House Lights</button>
+          <p id="house-light-status">House Lights are Off</p>
+        </div>
+        <!-- LDR & Model Suggestions Card -->
+        <div class="card">
+          <h3>Ambient Light & Model Suggestions</h3>
+          <p id="ldr-status">LDR Intensity: --</p>
+          <p id="model-suggestion">Model Suggestion: --</p>
+        </div>
+      </div>
+      <!-- Admin Logs Section -->
+      <div id="admin-logs" class="logs" style="display: none;">
+        <h3>Admin Logs</h3>
+        <pre id="logArea"></pre>
+        <button id="export-logs" class="glowing-button">Export Logs as CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
